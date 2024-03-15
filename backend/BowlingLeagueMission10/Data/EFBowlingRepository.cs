@@ -23,13 +23,13 @@ namespace BowlingLeagueMission10.Data
                 .Select(b => new BowlerTeamDto
                 {
                     BowlerFirstName = b.BowlerFirstName,
-                    BowlerMiddleInit = b.BowlerMiddleInit,
+                    BowlerMiddleInit = b.BowlerMiddleInit, //Okay if null
                     BowlerLastName = b.BowlerLastName,
                     BowlerAddress = b.BowlerAddress,
                     BowlerCity = b.BowlerCity,
                     BowlerState = b.BowlerState,
                     BowlerZip = b.BowlerZip,
-                    BowlerPhoneNumber = b.BowlerPhoneNumber,
+                    BowlerPhoneNumber = b.BowlerPhoneNumber, //Okay if null
 
                     TeamName = b.Team.TeamName
                 }).ToList();

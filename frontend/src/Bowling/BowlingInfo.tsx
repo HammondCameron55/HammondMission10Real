@@ -7,8 +7,11 @@ function BowlingInfo() {
   useEffect(() => {
     const fetchBowlerInfo = async () => {
       try {
-        const response = await fetch('api/GetBowlerTeamInfo');
+        const response = await fetch(
+          'http://localhost:5020/BowlingLeague/GetBowlerTeamInfo',
+        );
         const data = await response.json();
+        console.log(data);
         setBowlerInfo(data);
       } catch (error) {
         console.error('Error fetching bowler information:', error);
@@ -36,17 +39,17 @@ function BowlingInfo() {
           </thead>
           <tbody>
             {bowlerInfo.map((bowlerInfo) => (
-              <tr>
+              <tr key={bowlerInfo.bowlerId}>
                 <td>
-                  {bowlerInfo?.firstName} {bowlerInfo?.middleName}{' '}
-                  {bowlerInfo?.lastName}
+                  {bowlerInfo?.bowlerFirstName} {bowlerInfo?.bowlerMiddleInit}{' '}
+                  {bowlerInfo?.bowlerLastName}
                 </td>
                 <td>{bowlerInfo?.teamName}</td>
-                <td>{bowlerInfo?.address}</td>
-                <td>{bowlerInfo?.city}</td>
-                <td>{bowlerInfo?.state}</td>
-                <td>{bowlerInfo?.zip}</td>
-                <td>{bowlerInfo?.phoneNumber}</td>
+                <td>{bowlerInfo?.bowlerAddress}</td>
+                <td>{bowlerInfo?.bowlerCity}</td>
+                <td>{bowlerInfo?.bowlerState}</td>
+                <td>{bowlerInfo?.bowlerZip}</td>
+                <td>{bowlerInfo?.bowlerPhoneNumber}</td>
               </tr>
             ))}
           </tbody>

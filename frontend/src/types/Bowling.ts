@@ -1,14 +1,15 @@
-export type Bowling = {
+export interface Bowling {
   bowlerId: number;
-  firstName: string;
-  middleName: string;
-  lastName: string;
+  bowlerFirstName: string;
+  bowlerMiddleInit?: string; // Assuming it can be nullable
+  bowlerLastName: string;
+  bowlerAddress: string;
+  bowlerCity: string;
+  bowlerState: string;
+  bowlerZip: string;
+  bowlerPhoneNumber: string;
+
   teamName: string;
-  address: string;
-  city: string;
-  state: string;
-  zip: string;
-  phoneNumber: string;
-};
+}
 
 export {};

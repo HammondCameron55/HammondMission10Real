@@ -11,7 +11,7 @@ namespace BowlingLeagueMission10.Data
 
         public string BowlerLastName { get; set; }
 
-        public string BowlerMiddleInit { get; set; }
+        public string? BowlerMiddleInit { get; set; }
 
         public string BowlerAddress { get; set; }
 
@@ -21,7 +21,7 @@ namespace BowlingLeagueMission10.Data
 
         public string BowlerZip { get; set; }
 
-        public string BowlerPhoneNumber { get; set; }
+        public string? BowlerPhoneNumber { get; set; }
 
         [ForeignKey("TeamID")]
         public int TeamID { get; set; }

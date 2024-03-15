@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BowlingLeagueMission10")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7fb939d5f34f5eb9ff10743cb5b271c5c1a85f0b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8e9a75137870a762839e339433eb81fd4cf3e189")]
 [assembly: System.Reflection.AssemblyProductAttribute("BowlingLeagueMission10")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BowlingLeagueMission10")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

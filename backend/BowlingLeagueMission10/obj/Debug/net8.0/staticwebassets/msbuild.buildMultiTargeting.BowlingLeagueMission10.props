@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\BowlingLeagueMission10.props" />
+</Project>

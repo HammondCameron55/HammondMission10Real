@@ -22,11 +22,12 @@ function BowlingInfo() {
   }, []);
 
   return (
-    <div>
+    <div className="container-fluid">
       <h2>Bowler Information</h2>
-      {bowlerInfo ? (
-        <table>
-          <thead>
+      <h3>Team Shark and Team Marlin</h3>
+      {bowlerInfo.length > 0 ? ( // Changed to check length for content
+        <table className="table table-hover table-bordered">
+          <thead className="thead-dark">
             <tr>
               <th>Bowler Name</th>
               <th>Team Name</th>
@@ -38,18 +39,18 @@ function BowlingInfo() {
             </tr>
           </thead>
           <tbody>
-            {bowlerInfo.map((bowlerInfo) => (
-              <tr key={bowlerInfo.bowlerId}>
+            {bowlerInfo.map((info) => (
+              <tr key={info.bowlerId}>
                 <td>
-                  {bowlerInfo?.bowlerFirstName} {bowlerInfo?.bowlerMiddleInit}{' '}
-                  {bowlerInfo?.bowlerLastName}
+                  {info.bowlerFirstName} {info.bowlerMiddleInit}{' '}
+                  {info.bowlerLastName}
                 </td>
-                <td>{bowlerInfo?.teamName}</td>
-                <td>{bowlerInfo?.bowlerAddress}</td>
-                <td>{bowlerInfo?.bowlerCity}</td>
-                <td>{bowlerInfo?.bowlerState}</td>
-                <td>{bowlerInfo?.bowlerZip}</td>
-                <td>{bowlerInfo?.bowlerPhoneNumber}</td>
+                <td>{info.teamName}</td>
+                <td>{info.bowlerAddress}</td>
+                <td>{info.bowlerCity}</td>
+                <td>{info.bowlerState}</td>
+                <td>{info.bowlerZip}</td>
+                <td>{info.bowlerPhoneNumber}</td>
               </tr>
             ))}
           </tbody>

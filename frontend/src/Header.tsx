@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './OneRogueDeveloper.png';
+import logo from './AquaticBowling.webp';
 //import './Header.css'; // Assuming you will create a Header.css file for custom styles
 
 function Header(props: { title: string }) {
